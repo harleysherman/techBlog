@@ -1,0 +1,8 @@
+{{!-- homepage --}}
+{{#each blogPosts as |blogPost|}}
+<div class="blogPostContainer">
+    <h1 class="blogTitle">{{ blogPost.title }}</h1>
+    <h4 class="userName">{{ blogPost.name }}</h4>
+    <p class="blogDescription">{{ blogPost.description }}</p>
+</div>
+{{/each}}
