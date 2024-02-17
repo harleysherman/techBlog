@@ -1,18 +1,51 @@
 [
     {
-      "name": "Music Near Me",
-      "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-      "needed_funding": 5000
+      "title": "Thanks Dude!",
+      "description": "Great recommendation, love the ambience :)"
     },
     {
-      "name": "The Ultimate Tech Quiz",
-      "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-      "needed_funding": 10000
+      "title": "Coffee here helps",
+      "description": "Great coffee, was able to turn coffee into code!"
     },
     {
-      "name": "Roll 'Em Up",
-      "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-      "needed_funding": 800
+      "title": "Love the album shout out",
+      "description": "This album helped me put out so much work in a short time."
+    },
+    {
+      "title": "Love this resource! Main lifesaver!!",
+      "description": "The site literally saved my project. Thank you!"
+    },
+    {
+      "title": "Perfect Explanation",
+      "description": "Thanks for taking the time to explain how styling works for handlebars."
+    },
+    {
+      "title": "Great grub",
+      "description": "This place was the perfect break from working all that code."
+    },
+    {
+      "title": "Tech Recommendation Savior",
+      "description": "Thanks for the specifics on NAS recommendations and their storage."
+    },
+    {
+      "title": "Vision Pro Bust",
+      "description": "Vision pro is gate kept"
+    },
+    {
+      "title": "Interesting about Arc Browser",
+      "description": "Going to love testing the Arc Browser in my down time."
+    },
+    {
+      "title": "Love the optimism of this job market",
+      "description": "Thanks for providing actual ways to get hired for a developer job than just making a random youtube and hoping for the best."
+    },
+    {
+      "title": "Tech adjacent jobs are still tech jobs",
+      "description": "Thank you for the reminder that jobs that involve working alongside developers is still a tech job and a good way to start."
+    },
+    {
+      "title": "Great study resources",
+      "description": "Always on the lookout for more resources! Thanks for some new research points."
     }
   ]
   
