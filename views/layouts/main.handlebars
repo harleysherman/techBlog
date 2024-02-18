@@ -6,13 +6,22 @@
     <title>Tech Blog</title>
 </head>
 <body>
-    <header class="display-flex justify-space-between align-center p-2">
-    <h1>Tech Blog</h1>
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
+  <header class="display-flex justify-space-between align-center p-2">
+  <nav class="navbar">
+    <div class="container-fluid"> 
+      <a class="navbar-brand" href="/">
+        Tech Blog
+      </a>
+      <a href="/signup">
+        <button type="button" class="btn btn-link">Sign up</button>
+      </a>
+      {{#if logged_in}}
+        <a href="/login">
+          <button type="button" class="btn btn-link">Log out</button>
+        </a>
+      {{/if}}
+    </div>
+  </nav>
   </header>
   <main class="container container-fluid mt-5">
     {{{ body }}}

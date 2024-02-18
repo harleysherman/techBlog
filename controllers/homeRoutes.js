@@ -9,8 +9,8 @@ router.get ('/', async (req, res) => {
         const blogPost = await BlogPost.findAll({
             include: [
                 {
-                    model: BlogPost,
-                    attributes: ['title', 'description'],
+                    model: User,
+                    attributes: ['name'],
                 },
             ],
         });
@@ -23,26 +23,25 @@ router.get ('/', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-    
 });
 
-//navigation links for the homepage and the dashboard
-//http://localhost:3001/ --the homepage
-// router.get ('/dashboard', async (req, res) => {
-//     try{
-//         //findAll() blog posts
-//         const blogPosts = await BlogPost.findAll({
-//             include: [
-//                 {
-//                     model: BlogPost,
-//                     attributes: ['title', 'description'],
-//                 },
-//             ],
-//         });
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
+//navigation links for the user dashboard
+router.get ('/user/:id', async (req, res) => {
+    try{
+        //findOne() blog post
+        const blogPost = await BlogPost.findOne({
+            include: [
+                {
+                    model: BlogPost,
+                    attributes: ['title', 'description', 'user_id'],
+                },
+            ],
+        });
+    } catch (err) {
+        res.status(500).json(err);
+        console.log(err);
+    }
+});
 
 //option to log in
 router.get ('/login', async (req, res) => {

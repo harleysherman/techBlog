@@ -1,17 +1,62 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
+    "title": "Lovely Little Coffee Shop",
+    "description": "Go to 123 Main St. It has great tasting coffee and great wifi connection. The service is great. It is great place to get everything you need done.",
+    "user_id": 1
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "title": "Newest Coffee Shop",
+    "description": "This coffee has a new one you try every month that they make on site. Very fancy. Get to try new coffee every month so it's not the same old same old.",
+    "user_id": 2
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "title": "Gotta give Bloom some love this year",
+    "description": "Great album to drown everything and everyone out to code. Ultimate focuser.",
+    "user_id": 3
+  },
+  {
+    "title": "W3Schools for the win, every time!",
+    "description": "This site is simple documentation for a lot of languages. But I mainly use it for all things Javascript.",
+    "user_id": 4
+  },
+  {
+    "title": "Styling for Handlebars",
+    "description": "You'll need to create a public folder and store another folder called css in it to create style.css file. But wait until you get to React. It will make handlebars obsolete.",
+    "user_id": 5
+  },
+  {
+    "title": "Best burgers in town",
+    "description": "Go to 345 N Main St. They have the best burgers. The owner who runs things is a local, so support local business while you fuel up to write more code.",
+    "user_id": 6
+  },
+  {
+    "title": "Best NAS recommendation",
+    "description": "Honestly, just look at how much storage you use now. Then times that by four. Then get that much storage for your NAS.",
+    "user_id": 7
+  },
+  {
+    "title": "Vision Pro Update",
+    "description": "The Vision Pro is quite expensive. Not a lot of developers yet building on this platform. Nervous for the longevity of this production line.",
+    "user_id": 8
+  },
+  {
+    "title": "Arc Browser",
+    "description": "The Arc Browser is up and coming. Learn it before it becomes mainstream and be ahead of the curve.",
+    "user_id": 9
+  },
+  {
+    "title": "How to get a Job in the Market",
+    "description": "If you can't find a job as a developer, find a small company.",
+    "user_id": 10
+  },
+  {
+    "title": "Tech adjacent jobs",
+    "description": "If you're stuck looking for a developer job, try  to work in a tech adjacent job.",
+    "user_id": 12
+  },
+  {
+    "title": "New Resource Alert!",
+    "description": "Look into HackerWars to test your leetcode ways.",
+    "user_id": 12
   }
 ]
