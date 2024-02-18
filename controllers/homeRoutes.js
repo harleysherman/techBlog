@@ -25,21 +25,21 @@ router.get ('/', async (req, res) => {
     }
 });
 
-//navigation links for the homepage and the dashboard
-//http://localhost:3001/ --the homepage
-router.get ('/dashboard/:id', async (req, res) => {
+//navigation links for the user dashboard
+router.get ('/user/:id', async (req, res) => {
     try{
-        //findAll() blog posts
-        const blogPosts = await BlogPost.findOne({
+        //findOne() blog post
+        const blogPost = await BlogPost.findOne({
             include: [
                 {
                     model: BlogPost,
-                    attributes: ['title', 'description'],
+                    attributes: ['title', 'description', 'user_id'],
                 },
             ],
         });
     } catch (err) {
         res.status(500).json(err);
+        console.log(err);
     }
 });
 

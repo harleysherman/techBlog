@@ -1,51 +1,75 @@
 [
     {
       "title": "Thanks Dude!",
-      "description": "Great recommendation, love the ambience :)"
+      "description": "Great recommendation, love the ambience :)",
+      "user_id": 1,
+      "blog_post_id": 1
     },
     {
       "title": "Coffee here helps",
-      "description": "Great coffee, was able to turn coffee into code!"
+      "description": "Great coffee, was able to turn coffee into code!",
+      "user_id": 2,
+      "blog_post_id": 2
     },
     {
       "title": "Love the album shout out",
-      "description": "This album helped me put out so much work in a short time."
+      "description": "This album helped me put out so much work in a short time.",
+      "user_id": 3,
+      "blog_post_id": 3
     },
     {
       "title": "Love this resource! Main lifesaver!!",
-      "description": "The site literally saved my project. Thank you!"
+      "description": "The site literally saved my project. Thank you!",
+      "user_id": 4,
+      "blog_post_id": 4
     },
     {
       "title": "Perfect Explanation",
-      "description": "Thanks for taking the time to explain how styling works for handlebars."
+      "description": "Thanks for taking the time to explain how styling works for handlebars.",
+      "user_id": 5,
+      "blog_post_id": 5
     },
     {
       "title": "Great grub",
-      "description": "This place was the perfect break from working all that code."
+      "description": "This place was the perfect break from working all that code.",
+      "user_id": 6,
+      "blog_post_id": 6
     },
     {
       "title": "Tech Recommendation Savior",
-      "description": "Thanks for the specifics on NAS recommendations and their storage."
+      "description": "Thanks for the specifics on NAS recommendations and their storage.",
+      "user_id": 7,
+      "blog_post_id": 7
     },
     {
       "title": "Vision Pro Bust",
-      "description": "Vision pro is gate kept"
+      "description": "Vision pro is gate kept",
+      "user_id": 8,
+      "blog_post_id": 8
     },
     {
       "title": "Interesting about Arc Browser",
-      "description": "Going to love testing the Arc Browser in my down time."
+      "description": "Going to love testing the Arc Browser in my down time.",
+      "user_id": 9,
+      "blog_post_id": 9
     },
     {
       "title": "Love the optimism of this job market",
-      "description": "Thanks for providing actual ways to get hired for a developer job than just making a random youtube and hoping for the best."
+      "description": "Thanks for providing actual ways to get hired for a developer job than just making a random youtube and hoping for the best.",
+      "user_id": 10,
+      "blog_post_id": 10
     },
     {
       "title": "Tech adjacent jobs are still tech jobs",
-      "description": "Thank you for the reminder that jobs that involve working alongside developers is still a tech job and a good way to start."
+      "description": "Thank you for the reminder that jobs that involve working alongside developers is still a tech job and a good way to start.",
+      "user_id": 11,
+      "blog_post_id": 11
     },
     {
       "title": "Great study resources",
-      "description": "Always on the lookout for more resources! Thanks for some new research points."
+      "description": "Always on the lookout for more resources! Thanks for some new research points.",
+      "user_id": 12,
+      "blog_post_id": 12
     }
   ]
   

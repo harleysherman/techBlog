@@ -1,7 +1,7 @@
 {{!-- need blog post already created --}}
 {{#each blogPosts as |blogPost|}}
 <div class="blogPostContainer">
-    <a href=`/dashboard/${blogPost.id}`></a>
+    <a href=`/user/${blogPost.id}`></a>
     <h1 class="blogTitle">{{ blogPost.title }}</h1>
     <h4 class="userName">{{ blogPost.name }}</h4>
     <p class="blogDescription">{{ blogPost.description }}</p>
