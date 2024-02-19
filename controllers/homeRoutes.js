@@ -25,18 +25,25 @@ router.get ('/', async (req, res) => {
     }
 });
 
-//navigation links for the user dashboard
-router.get ('/user/:id', async (req, res) => {
+//link for the user dashboard
+router.get ('/dashboard', async (req, res) => {
     try{
-        //findOne() blog post
-        const blogPost = await BlogPost.findOne({
+        //findAll() blog post
+        const blogPostData = await BlogPost.findAll({
             include: [
                 {
                     model: BlogPost,
-                    attributes: ['title', 'description', 'user_id'],
+                    attributes: ['title', 'description'],
                 },
             ],
-        });
+        })
+
+        const userBlogPost = blogPostData.get({ plain: true });
+
+        res.render(`dashboard`, {
+         ...userBlogPost,
+         logged_in: true   
+        });  
     } catch (err) {
         res.status(500).json(err);
         console.log(err);
@@ -62,6 +69,6 @@ router.get ('/signup', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-});
+  });
 
 module.exports = router;

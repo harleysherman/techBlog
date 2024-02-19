@@ -4,5 +4,6 @@
     <h1 class="blogTitle">{{ blogPost.title }}</h1>
     <h4 class="userName">{{ blogPost.name }}</h4>
     <p class="blogDescription">{{ blogPost.description }}</p>
+    <p class="blogDateCreated">{{ format_date blogPost.date_created }}</p>
 </div>
 {{/each}}

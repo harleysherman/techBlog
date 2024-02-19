@@ -12,14 +12,16 @@
       <a class="navbar-brand" href="/">
         Tech Blog
       </a>
-      <a href="/signup">
-        <button type="button" class="btn btn-link">Sign up</button>
-      </a>
       {{#if logged_in}}
         <a href="/login">
           <button type="button" class="btn btn-link">Log out</button>
         </a>
+        {{else}} 
+        <a href="/signup">
+          <button type="button" class="btn btn-link">Sign up</button>
+        </a>
       {{/if}}
+
     </div>
   </nav>
   </header>
