@@ -6,7 +6,7 @@ const signupFormHandler = async (event) => {
     const password = document.querySelector('#password-signup').value.trim();
   
     if (name && email && password) {
-      const response = await fetch('/signup', {
+      const response = await fetch('/api/users/signup', {
         method: 'POST',
         body: JSON.stringify({ name, email, password }),
         headers: { 'Content-Type': 'application/json' },
@@ -14,11 +14,11 @@ const signupFormHandler = async (event) => {
       
       //console.log("went through first if statement");
       if (response.ok) {
-        document.location.replace("");
+        document.location.replace("/dashboard");
         //console.log("replaced url");
       } else {
         alert(response.statusText);
-        console.log("didn't replace url");
+        // console.log("didn't replace url");
         //console.log(response.statusText);
       }
     }
