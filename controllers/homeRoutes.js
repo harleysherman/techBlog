@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { BlogPost, User } = require('../models');
-//const withAuth = require('../utils/auth');
+const withAuth = require('../utils/withAuth');
 
 // existing blog posts if any have been posted
 router.get ('/', async (req, res) => {
@@ -26,7 +26,7 @@ router.get ('/', async (req, res) => {
 });
 
 //link for the user dashboard
-router.get ('/dashboard', async (req, res) => {
+router.get ('/dashboard', withAuth, async (req, res) => {
     try{
         //findAll() blog post
         const blogPostData = await BlogPost.findAll({
