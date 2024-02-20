@@ -1,13 +1,22 @@
-{{!-- need blog post already created --}}
-{{#each blogPosts as |blogPost|}}
-<div class="blogPostContainer">
-    <a href=`/user/${blogPost.id}`></a>
-    <h1 class="blogTitle">{{ blogPost.title }}</h1>
-    <h4 class="userName">{{ blogPost.name }}</h4>
-    <p class="blogDescription">{{ blogPost.description }}</p>
-    <button class="editButton" id="onClick"><a href="/dashboard/{{ blogPost.id }}"></a></button>
-</div>
-{{/each}}
-{{!-- take user to edit a post in different handlebars template --}}
+{{!-- create a post --}}
+<form class="newPostForm">
 
-<script src="./public/js/user.js"></script>
+</form>
+
+{{!-- need blog post already created --}}
+<h1>Current Posts</h1>
+
+<div class="blogPostContainer">
+    {{#each blogPosts as |blogPost|}}
+        <a href=`/user/${blogPost.id}`></a>
+        <h2 class="blogTitle">{{ blogPost.title }}</h2>   
+        <p class="blogDescription">{{ blogPost.description }}</p>
+        <button class="editButton" id="onClick"><a href="/edit/{{ blogPost.id }}">Edit</a></button>
+        <button class="deleteButton" data-id={{ blogPost.id }} id="onClick">Delete</button>
+    {{/each}}
+</div>
+
+{{log this}}
+
+{{!-- take user to edit a post in different handlebars template --}}
+<script src="/js/profile.js"></script>
