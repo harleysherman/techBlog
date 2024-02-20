@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { BlogPost, User } = require('../models');
-//const withAuth = require('../utils/auth');
+const withAuth = require('../utils/withAuth');
 
 // existing blog posts if any have been posted
 router.get ('/', async (req, res) => {
@@ -26,22 +26,27 @@ router.get ('/', async (req, res) => {
 });
 
 //link for the user dashboard
-router.get ('/dashboard', async (req, res) => {
+router.get ('/dashboard', withAuth, async (req, res) => {
     try{
         //findAll() blog post
         const blogPostData = await BlogPost.findAll({
+            where: {
+                user_id: req.session.user_id,
+            },
             include: [
                 {
-                    model: BlogPost,
-                    attributes: ['title', 'description'],
+                    model: User,
+                    attributes: ['name','email'],
                 },
             ],
         })
+        console.log(blogPostData);
 
-        const userBlogPost = blogPostData.get({ plain: true });
+        // const userBlogPost =  blogPostData.map((blogPost) => blogPost.get({ plain: true }));
+        const userBlogPost = blogPostData.map(post => post.get({ plain: true }));
 
         res.render(`dashboard`, {
-         ...userBlogPost,
+         blogPosts: userBlogPost,
          logged_in: true   
         });  
     } catch (err) {

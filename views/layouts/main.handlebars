@@ -13,12 +13,16 @@
         Tech Blog
       </a>
       {{#if logged_in}}
-        <a href="/login">
-          <button type="button" class="btn btn-link">Log out</button>
+        <a href="/dashboard">
+          <button type="button" class="btn btn-link">Dashboard</button>
         </a>
+        <button type="button" class="btn btn-link" id="logout">Log out</button>
         {{else}} 
         <a href="/signup">
           <button type="button" class="btn btn-link">Sign up</button>
+        </a>
+        <a href="/login">
+          <button type="button" class="btn btn-link">Login</button>
         </a>
       {{/if}}
 
