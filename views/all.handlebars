@@ -2,9 +2,10 @@
 {{#each blogPosts as |blogPost|}}
 <div class="blogPostContainer">
     <h1 class="blogTitle">{{ blogPost.title }}</h1>
-    <h4 class="userName">{{ blogPost.user.name }}</h4>
+    <h4 class="userName">By: {{ blogPost.user.name }}</h4>
     <p class="blogDescription">{{ blogPost.description }}</p>
     <p class="blogDateCreated">{{ format_date blogPost.date_created }}</p>
+    <button class="btn btn-primary" type="submit">Add Comment</button>
 </div>
 {{/each}}
 

@@ -14,6 +14,27 @@ router.post('/', async (req, res) => {
   }
 });
 
+// add put to update a post at /edit/:id
+router.put('/:id', async (req, res) => {
+  try {
+    const editPost = await BlogPost.update(
+      {
+        title: req.body.editTitle,
+        description: req.body.editDescription,
+        user_id: req.session.user_id,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.status(200).json(editPost);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.delete('/:id', async (req, res) => {
   try {
     const blogPostData = await BlogPost.destroy({

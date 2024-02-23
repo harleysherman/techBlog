@@ -1,10 +1,10 @@
-<div class="row">
+{{!-- <div class="row">
   <div class="col-md-6">
     <h2>Edit Comment</h2>
 
-    <form class="form login-form">
+    <form class="form login-form editCommentForm">
       <div class="form-group">
-        <label for="comment-title">Comment Title:</label>
+        <label for="comment-title">Title:</label>
         <input class="form-input" type="text" id="comment-title" />
       </div>
       <div class="form-group">
@@ -12,8 +12,24 @@
         <input class="form-input" type="text" id="comment-description"/>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit">Submit Change</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
       </div>
     </form>
   </div>
+</div> --}}
+
+<h1>Current Comment</h1>
+
+<div class="commentContainer">
+    {{#each comments as |comment|}}
+        <a href=`/user/${comment.id}`></a>
+        <h2 class="blogTitle"> {{ comment.title }}</h2>   
+        <p class="blogDescription">{{ comment.description }}</p>
+        <button class="editButton" id="onClick"><a href="/edit/{{ comment.id }}">Edit</a></button>
+        <button class="deleteButton" data-id={{ comment.id }} id="onClick">Delete</button>
+    {{/each}}
 </div>
+
+{{log this}}
+
+<script src="/js/profile.js"></script>

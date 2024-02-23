@@ -25,6 +25,26 @@ router.get ('/', async (req, res) => {
     }
 });
 
+//post() to post a comment on current clicked post
+//http://localhost:3001/post/:id
+router.post('/:id', withAuth, async (req, res) => {
+    try {
+        const clickedBlogPost = await BlogPost.findOne({
+            where: {
+                user_id: req.session.user_id,
+            },
+        });
+        const oneBlogPost = clickedBlogPost.get({ plain: true });
+
+        res.render(`all`, {
+            ...oneBlogPost,
+            logged_in: true   
+        });  
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 //link for the user dashboard
 router.get ('/dashboard', withAuth, async (req, res) => {
     try{
@@ -48,6 +68,25 @@ router.get ('/dashboard', withAuth, async (req, res) => {
         res.render(`dashboard`, {
          blogPosts: userBlogPost,
          logged_in: true   
+        });  
+    } catch (err) {
+        res.status(500).json(err);
+        console.log(err);
+    }
+});
+
+//edit a post at a specific id
+router.get('/edit/:id', withAuth, async (req, res) => {
+    try {
+        const editPost = await BlogPost.findOne({
+            where: {
+                id: req.params.id,
+            },
+        })
+        const newPost = editPost.get({ plain: true });
+        res.render(`edit`, {
+            ...newPost,
+            logged_in: true   
         });  
     } catch (err) {
         res.status(500).json(err);
