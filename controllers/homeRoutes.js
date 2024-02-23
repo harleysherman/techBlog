@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { BlogPost, User } = require('../models');
+const { BlogPost, User, Comment } = require('../models');
 const withAuth = require('../utils/withAuth');
 
 // existing blog posts if any have been posted
@@ -27,16 +27,19 @@ router.get ('/', async (req, res) => {
 
 //post() to post a comment on current clicked post
 //http://localhost:3001/post/:id
-router.post('/:id', withAuth, async (req, res) => {
+router.get('/post/:id', withAuth, async (req, res) => {
     try {
         const clickedBlogPost = await BlogPost.findOne({
             where: {
-                user_id: req.session.user_id,
+                id: req.params.id,
             },
+            include: {
+                model: Comment,
+            }
         });
         const oneBlogPost = clickedBlogPost.get({ plain: true });
 
-        res.render(`all`, {
+        res.render(`addComment`, {
             ...oneBlogPost,
             logged_in: true   
         });  
