@@ -1,0 +1,40 @@
+{{!-- Display post first --}}
+<h1>Current Post</h1>
+<h2 class="blogTitle">{{ blogPost.title }}</h2>
+<h4 class="userName">By: {{ blogPost.user.name }}</h4>
+<p class="blogDescription">{{ blogPost.description }}</p>
+<p class="blogDateCreated">{{ format_date blogPost.date_created }}</p>
+
+{{!-- Loop over comments[] by form --}}
+{{!-- <div class="commentContainer">
+    <h1>Current Comment</h1>
+    {{#each comments as |comment|}}
+        <a href=`/post/${comment.id}`></a>
+        <h2 class="blogTitle"> {{ comment.title }}</h2>   
+        <p class="blogDescription">{{ comment.description }}</p>
+        <button class="deleteButton" data-id={{ comment.id }} id="onClick">Add Comment</button>
+    {{/each}}
+</div> --}}
+
+<div class="row">
+  <div class="col-md-6">
+    <h2>Add Comment</h2>
+
+    <form class="form addCommentForm">
+      <div class="form-group">
+        <label for="addCommentEdit">Title:</label>
+        <input class="form-input" type="text" id="addCommentEdit" value="{{ title }}"/>
+      </div>
+      <div class="form-group">
+        <label for="addCommentDescriptionEdit">Description:</label>
+        <input class="form-input" type="text" id="addCommentDescription" value="{{ description }}"/>
+      </div>
+      {{!-- add comment button with form --}}
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{{ log this }}
