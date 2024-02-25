@@ -1,19 +1,20 @@
 {{!-- Display post first --}}
-<h1 class="blogTitle">{{ blogPost.title }}</h1>
+<h1>Current Post</h1>
+<h2 class="blogTitle">{{ blogPost.title }}</h2>
 <h4 class="userName">By: {{ blogPost.user.name }}</h4>
 <p class="blogDescription">{{ blogPost.description }}</p>
 <p class="blogDateCreated">{{ format_date blogPost.date_created }}</p>
 
 {{!-- Loop over comments[] by form --}}
-<div class="commentContainer">
-    <h1>Current Comments</h1>
+{{!-- <div class="commentContainer">
+    <h1>Current Comment</h1>
     {{#each comments as |comment|}}
-        <a href=`/user/${comment.id}`></a>
+        <a href=`/post/${comment.id}`></a>
         <h2 class="blogTitle"> {{ comment.title }}</h2>   
         <p class="blogDescription">{{ comment.description }}</p>
         <button class="deleteButton" data-id={{ comment.id }} id="onClick">Add Comment</button>
     {{/each}}
-</div>
+</div> --}}
 
 <div class="row">
   <div class="col-md-6">
