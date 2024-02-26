@@ -5,7 +5,7 @@
 - The motivation is to learn how to create routes inside sequelize and handlebars.
 - The project was built to create a basic blog structure.
 - The problem this project solves is the understanding of the routes in sequelize and modularization of handlebar files.
-- I learned how to work with sequelize and handlebars by going through several files over time.
+- I learned how to work with sequelize and handlebars by going through several files over time. 
 
 ## Table of Contents (Optional)
 
