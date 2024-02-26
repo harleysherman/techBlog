@@ -1,9 +1,9 @@
 {{!-- Display post first --}}
 <h1>Current Post</h1>
-<h2 class="blogTitle">{{ blogPost.title }}</h2>
+<h2 class="blogPostTitle">{{ blogPost.title }}</h2>
 <h4 class="userName">By: {{ blogPost.user.name }}</h4>
 <p class="blogDescription">{{ blogPost.description }}</p>
-<p class="blogDateCreated">{{ format_date blogPost.date_created }}</p>
+<p class="blogDateCreated">{{ formatDate blogPost.date_created }}</p>
 
 {{!-- Loop over comments[] by form --}}
 {{!-- <div class="commentContainer">

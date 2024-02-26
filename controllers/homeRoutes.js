@@ -35,12 +35,13 @@ router.get('/post/:id', withAuth, async (req, res) => {
             },
             include: {
                 model: Comment,
+                model: User,
             }
         });
-        const oneBlogPost = clickedBlogPost.get({ plain: true });
+        const blogPost = clickedBlogPost.get({ plain: true });
 
         res.render(`addComment`, {
-            ...oneBlogPost,
+            blogPost,
             logged_in: true   
         });  
     } catch (err) {
