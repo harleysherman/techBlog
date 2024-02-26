@@ -7,7 +7,7 @@
 - The problem this project solves is the understanding of the routes in sequelize and modularization of handlebar files.
 - I learned how to work with sequelize and handlebars by going through several files over time.
 
-## Table of Contents (Optional)
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
