@@ -1,0 +1,30 @@
+.navbar {
+  font-family: 'Orbitron', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #250dff;
+}
+
+.blogPostContainer {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-style: normal;
+  color: #250dff;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #b3127a;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #250dff;
+  text-decoration: underline;
+}
