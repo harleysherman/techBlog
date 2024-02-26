@@ -433,7 +433,6 @@ button {
 a {
   color: #2212B3;
   text-decoration: none;
-  border-bottom: 4px solid #CCFF00;
 }
 
 a:hover {
@@ -1194,7 +1193,6 @@ label form [type='radio'] {
 
 .blogPostContainer {
     margin: 1em 0;
-    border-bottom: 4px solid #CCFF00;
 }
 
 /* FLEX CONTENT */

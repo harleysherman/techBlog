@@ -6,6 +6,10 @@
   color: #250dff;
 }
 
+.navbar-brand {
+  border-bottom: 4px solid #ccff00;
+}
+
 .blogPostContainer {
   font-family: 'Mukta', sans-serif;
   font-weight: 400;
